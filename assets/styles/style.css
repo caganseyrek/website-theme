@@ -280,6 +280,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     overflow-wrap: break-word;
     word-wrap: break-word;
     word-break: break-word;
+    overflow: hidden;
 }
 
 #page-contents a {
@@ -320,11 +321,29 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     border-bottom: solid 1px var(--ColorDarkest);
     height: 1px;
     margin: 20px 0px;
+    overflow: hidden;
 }
 
 #page-contents p {
     display: block;
     margin: 10px 0px;
+}
+
+#page-contents img {
+    border: solid 2px var(--ColorMiddle);
+    border-radius: var(--BorderRadius);
+}
+
+#page-contents img.left-aligned {
+    float: left;
+    display: block;
+    margin: 10px 20px 10px 0px;
+}
+
+#page-contents img.right-aligned {
+    float: right;
+    display: block;
+    margin: 10px 0px 10px 20px;
 }
 
 #page-contents blockquote.info p,
@@ -337,7 +356,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 #page-contents blockquote.info {
     display: block;
     background-color: var(--InfoColorLighter);
-    background-image: url("/assets/icons/blockquote/info_FILL1_wght700_GRAD200_opsz48_2.svg");
+    background-image: url("/assets/icons/blockquote/info_FILL1_wght700_GRAD200_opsz48.svg");
     background-repeat: no-repeat;
     background-size: 20px 20px;
     background-position: 15px 18px;
@@ -347,6 +366,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     border: solid 2px var(--InfoColorLight);
     color: var(--InfoFontColor);
     margin: 10px 0px;
+    overflow: hidden;
 }
 
 #page-contents blockquote.warning {
@@ -362,6 +382,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     border: solid 2px var(--WarningColorLight);
     color: var(--WarningFontColor);
     margin: 10px 0px;
+    overflow: hidden;
 }
 
 #page-contents ul:not(.sublist),
@@ -372,6 +393,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     background-color: var(--ColorLight);
     list-style-position: inside;
     margin: 10px 0px;
+    overflow: hidden;
 }
 
 #page-contents ul li:not(:last-child),
@@ -424,7 +446,8 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents figure.highlight pre {
     border-radius: var(--BorderRadius);
-    background-color: var(--ColorDark);
+    background-color: var(--ColorLight);
+    border: solid 2px var(--ColorMiddle);
     padding: 20px;
     box-sizing: border-box;
     overflow-x: auto;
