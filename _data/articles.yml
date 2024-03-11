@@ -1,0 +1,31 @@
+- title: Django
+  url: django
+  available: false
+
+- title: Ruby on Rails
+  url: rails
+  available: false
+
+- title: ASP.NET Core
+  url: aspdotnetcore
+  available: false
+
+- title: Spring
+  url: spring
+  available: false
+
+- title: Laravel
+  url: Spring
+  available: false
+
+- title: React
+  url: react
+  available: false
+
+- title: Express
+  url: expressjs
+  available: false
+
+- title: Electron
+  url: electronjs
+  available: false

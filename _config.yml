@@ -1,0 +1,26 @@
+author: Çağan Seyrek
+git_repo: https://github.com/caganseyrek/caganseyrek.github.io
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+exclude:
+  - mdstyle.md
+  - paragraph.md
+  - anchors.js
+
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  input: GFM
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: "404"
+    values:
+      layout: "notfound"
