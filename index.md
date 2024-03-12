@@ -45,7 +45,7 @@ The website and its pages are generated with [Jekyll](https://jekyllrb.com/). Th
 
 {% highlight markdown %}
 ---
-title: Homepage
+title: Home
 permalink: /
 editlink: edit/main/index.md
 ---
