@@ -20,6 +20,7 @@
     --LinkColor: #C20114;
 
     --InlineCodeBackground: rgba(199, 204, 219, 0.5);
+    --ListInlineCodeBackground: rgba(80, 87, 110, 0.25);
 
     --DefaultFont: "Roboto Serif";
     --CodeFont: "Roboto Mono";
@@ -428,6 +429,15 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents ul {
     list-style-type: square;
+}
+
+#page-contents ul:not(.sublist) code.highlighter-rouge,
+#page-contents ol:not(.sublist) code.highlighter-rouge {
+    padding: 3px 3px !important;
+    font-size: 90%;
+    background-color: var(--ListInlineCodeBackground);
+    border-radius: 5px;
+    color: var(--ColorDarkest);
 }
 
 #page-contents table {
