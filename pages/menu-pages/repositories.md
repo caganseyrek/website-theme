@@ -1,7 +1,7 @@
 ---
 title: Repositories
 permalink: /repos
-editlink: edit/main/pages/repositories/repositories.md
+editlink: edit/main/pages/menu-pages/repositories.md
 ---
 
 <div class="repository-container">
