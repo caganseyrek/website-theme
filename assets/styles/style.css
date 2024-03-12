@@ -20,13 +20,14 @@
     --LinkColor: #C20114;
 
     --InlineCodeBackground: rgba(199, 204, 219, 0.5);
-    --ListInlineCodeBackground: rgba(80, 87, 110, 0.25);
+    --TransparentBackground: rgba(80, 87, 110, 0.25);
 
     --DefaultFont: "Roboto Serif";
     --CodeFont: "Roboto Mono";
     --FontSize: 16px;
     --LineHeight: 28px;
     --BorderRadius: 10px;
+    --LessBorderRadius: 5px;
 
     --InfoColor: #5FA8D3;
     --InfoFontColor: #133345;
@@ -435,7 +436,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 #page-contents ol:not(.sublist) code.highlighter-rouge {
     padding: 3px 3px !important;
     font-size: 90%;
-    background-color: var(--ListInlineCodeBackground);
+    background-color: var(--TransparentBackground);
     border-radius: 5px;
     color: var(--ColorDarkest);
 }
@@ -482,8 +483,65 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     padding: 3px 3px !important;
     font-size: 90%;
     background-color: var(--ColorLight);
-    border-radius: 5px;
+    border-radius: var(--LessBorderRadius);
     color: var(--ColorDarkest);
+}
+
+#page-contents .repository-preview {
+    background-color: var(--ColorLight);
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: var(--BorderRadius);
+}
+
+#page-contents .repository-preview .repository-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+#page-contents .repository-preview .repository-info .repository-tags {
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+
+#page-contents .repository-preview .repository-info .repository-tags .repository-tag {
+    background-color: var(--ColorMiddle);
+    color: var(--ColorLightest);
+    padding: 5px 10px;
+    box-sizing: border-box;
+    border-radius: var(--BorderRadius);
+    display: inline-block;
+}
+
+#page-contents .repository-preview .repository-links {
+    width: fit-content;
+}
+
+#page-contents .repository-preview .repository-links a {
+    background-color: var(--TransparentBackground);
+    border-radius: var(--BorderRadius);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: var(--BorderRadius);
+    color: var(--ColorDarkest);
+    text-decoration-color: transparent;
+    display: inline-block;
+}
+
+#page-contents .repository-preview .repository-links a.unavailable {
+    color: var(--ColorMiddle);
+}
+
+#page-contents .repository-preview .repository-links a:hover {
+    text-decoration-color: var(--ColorDarkest);
+}
+
+#page-contents .repository-preview .repository-links a:not(:last-child) {
+    margin-right: 5px;
 }
 
 #page-contents #notfound {
