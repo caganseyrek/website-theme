@@ -64,7 +64,7 @@ Additionally,
 
 ## Icons
 
-Icons used in the both sidebars (except the GitHub logo) are used under the [Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE). The original work is from Google Material Icons and can be found at [https://fonts.google.com/icons](https://fonts.google.com/icons) or at [https://github.com/google/material-design-icons](https://github.com/google/material-design-icons).
+Icons used in the both sidebars (except the GitHub logo) are under the [Apache License Version 2.0](https://github.com/google/material-design-icons/blob/master/LICENSE). The original work is from Google Material Icons and can be found at [https://fonts.google.com/icons](https://fonts.google.com/icons) or at [https://github.com/google/material-design-icons](https://github.com/google/material-design-icons).
 
 The icons are modified for their use in this website. Their modifications are following:
 
