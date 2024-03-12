@@ -318,7 +318,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     border-left: 0px;
     border-right: 0px;
     border-top: 0px;
-    border-bottom: solid 1px var(--ColorDarkest);
+    border-bottom: solid 1px var(--ColorMiddle);
     height: 1px;
     margin: 20px 0px;
     overflow: hidden;
