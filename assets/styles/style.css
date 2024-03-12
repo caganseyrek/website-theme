@@ -199,7 +199,7 @@ aside#right-sidebar {
     overflow-x: hidden;
 }
 
-aside#right-sidebar label#toc-title{
+aside#right-sidebar label#toc-title {
     background-color: var(--ColorMiddle);
     background-image: url("/assets/icons/anchor_FILL1_wght700_GRAD200_opsz48.svg");
     background-repeat: no-repeat;
@@ -394,8 +394,9 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 #page-contents blockquote.warning a:hover {
     text-decoration-color: inherit;
 }
-#page-contents blockquote.info code.highlighter-rouge ,
-#page-contents blockquote.warning code.highlighter-rouge  {
+
+#page-contents blockquote.info code.highlighter-rouge,
+#page-contents blockquote.warning code.highlighter-rouge {
     padding: 3px 3px !important;
     font-size: 90%;
     background-color: var(--InlineCodeBackground);
@@ -534,6 +535,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents .repository-preview .repository-links a.unavailable {
     color: var(--ColorMiddle);
+    cursor: not-allowed;
 }
 
 #page-contents .repository-preview .repository-links a:hover {
