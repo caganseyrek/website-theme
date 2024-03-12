@@ -563,10 +563,17 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
     #page-wrapper {
         display: block;
-        padding: 0px 40px;
+    }
+
+    #page-contents {
+        padding: 20px 40px;
         box-sizing: border-box;
     }
-    
+
+    #page-header {
+        border-radius: 0px;
+    }
+
     aside#right-sidebar {
         border-left: solid 2px var(--ColorDarkest);
     }
