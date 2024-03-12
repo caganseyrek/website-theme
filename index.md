@@ -69,6 +69,6 @@ Icons used in the both sidebars (except the GitHub logo) are used under the [Apa
 The icons are modified for their use in this website. Their modifications are following:
 
   * The icons in the left sidebar, right sidebar, the mobile menu button and the color of the icon used in the mobile table of contents button have been changed to match the website’s color scheme (#E1E5EE)
-  * The color of the icon used in the info box is changed to (#004074)
-  * The color of the icon used in the warning box is changed to (#835501)
+  * The color of the icon used in the info box is changed to (#133345)
+  * The color of the icon used in the warning box is changed to (#634E00)
   * The color of the icon used before the h3 headers are changed to (#2A324B)
