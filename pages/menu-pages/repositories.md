@@ -4,17 +4,14 @@ permalink: /repos
 editlink: edit/main/pages/repositories/repositories.md
 ---
 
-<div class="repository-preview">
+<div class="repository-container">
     <h2>TOC Generator</h2>
-    <span>A simple script that uses the headings in the content of the page and automatically generates a table of contents with sublists and classes for styling.</span>
+    <p>A simple script that uses the headings in the content of the page and automatically generates a table of contents with sublists and classes for styling.</p>
     <div class="repository-info">
+        <p markdown="1">Made with `Javascript` `CSS`</p>
         <div class="repository-links">
-            <a class="unavailable" target="_blank">Documentation</a>
             <a href="https://github.com/caganseyrek/toc-generator" target="_blank">See on GitHub</a>
-        </div>
-        <div class="repository-tags">
-            <label class="repository-tag">Javascript</label>
-            <label class="repository-tag">CSS</label>
+            <a class="unavailable" target="_blank">Documentation</a>
         </div>
     </div>
 </div>

@@ -160,7 +160,7 @@ aside#left-sidebar::-webkit-scrollbar-thumb {
     border-top-right-radius: 0px;
     border-top-left-radius: 0px;
     color: var(--ColorLightest);
-    padding: 12px 15px;
+    padding: 13px 15px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -297,7 +297,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     font-size: calc(1.50 * var(--FontSize));
     line-height: normal;
     margin: 0px;
-    padding: 10px 0px;
+    padding-top: 10px;
     box-sizing: border-box;
     display: block;
 }
@@ -310,7 +310,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     font-size: calc(1.25 * var(--FontSize));
     line-height: normal;
     margin: 0px;
-    padding: 10px 0px 10px 25px;
+    padding: 10px 0px 0px 25px;
     box-sizing: border-box;
     display: block;
 }
@@ -397,11 +397,12 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents blockquote.info code.highlighter-rouge,
 #page-contents blockquote.warning code.highlighter-rouge {
-    padding: 3px 3px !important;
+    padding: 3px 5px !important;
     font-size: 90%;
-    background-color: var(--InlineCodeBackground);
     border-radius: 5px;
+    background-color: var(--InlineCodeBackground);
     color: var(--ColorDarkest);
+    font-family: var(--CodeFont);
 }
 
 #page-contents ul:not(.sublist),
@@ -435,11 +436,12 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents ul:not(.sublist) code.highlighter-rouge,
 #page-contents ol:not(.sublist) code.highlighter-rouge {
-    padding: 3px 3px !important;
+    padding: 3px 5px !important;
     font-size: 90%;
-    background-color: var(--TransparentBackground);
     border-radius: 5px;
+    background-color: var(--TransparentBackground);
     color: var(--ColorDarkest);
+    font-family: var(--CodeFont);
 }
 
 #page-contents table {
@@ -470,6 +472,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 #page-contents figure.highlight pre {
     margin: 10px 0px;
     padding: 0px;
+    font-family: var(--CodeFont);
 }
 
 #page-contents figure.highlight pre {
@@ -481,69 +484,63 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 }
 
 #page-contents code.highlighter-rouge {
-    padding: 3px 3px !important;
+    padding: 3px 5px !important;
     font-size: 90%;
     background-color: var(--ColorLight);
     border-radius: var(--LessBorderRadius);
     color: var(--ColorDarkest);
+    font-family: var(--CodeFont);
 }
 
-#page-contents .repository-preview {
+#page-contents .repository-container {
     background-color: var(--ColorLight);
     padding: 20px;
     box-sizing: border-box;
     border-radius: var(--BorderRadius);
 }
 
-#page-contents .repository-preview .repository-info {
+#page-contents .repository-container .repository-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
-    margin-top: 10px;
 }
 
-#page-contents .repository-preview .repository-info .repository-tags {
-    width: fit-content;
-    height: fit-content;
-    overflow: hidden;
+#page-contents .repository-container .repository-info p code.highlighter-rouge {
+    padding: 3px 5px !important;
+    font-size: 90%;
+    background-color: var(--TransparentBackground);
+    border-radius: var(--LessBorderRadius);
+    color: var(--ColorDarkest);
+    font-family: var(--CodeFont);
 }
 
-#page-contents .repository-preview .repository-info .repository-tags .repository-tag {
-    background-color: var(--ColorMiddle);
-    color: var(--ColorLightest);
-    padding: 5px 10px;
-    box-sizing: border-box;
-    border-radius: var(--BorderRadius);
-    display: inline-block;
+#page-contents .repository-container .repository-info .repository-links {
+    display: flex;
+    justify-content: end;
 }
 
-#page-contents .repository-preview .repository-links {
-    width: fit-content;
-}
-
-#page-contents .repository-preview .repository-links a {
+#page-contents .repository-container .repository-info .repository-links a {
     background-color: var(--TransparentBackground);
     border-radius: var(--BorderRadius);
     padding: 10px;
     box-sizing: border-box;
-    border-radius: var(--BorderRadius);
+    border-radius: var(--LessBorderRadius);
     color: var(--ColorDarkest);
     text-decoration-color: transparent;
     display: inline-block;
 }
 
-#page-contents .repository-preview .repository-links a.unavailable {
+#page-contents .repository-container .repository-info .repository-links a.unavailable {
     color: var(--ColorMiddle);
     cursor: not-allowed;
 }
 
-#page-contents .repository-preview .repository-links a:hover {
+#page-contents .repository-container .repository-info .repository-links a:hover {
     text-decoration-color: var(--ColorDarkest);
 }
 
-#page-contents .repository-preview .repository-links a:not(:last-child) {
-    margin-right: 5px;
+#page-contents .repository-container .repository-info .repository-links a:not(:last-child) {
+    margin-right: 10px;
 }
 
 #page-contents #notfound {
@@ -624,6 +621,17 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     background-color: var(--ColorMiddle);
 }
 
+@media only screen and (max-width: 655px) {
+    #page-contents .repository-container .repository-info {
+        display: block;
+    }
+
+    #page-contents .repository-container .repository-info .repository-links {
+        display: flex;
+        justify-content: start;
+    }
+}
+
 @media only screen and (max-width: 1200px) {
     #m-topbar {
         display: flex;
@@ -642,10 +650,6 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
     #page-header {
         border-radius: 0px;
-    }
-
-    aside#right-sidebar {
-        border-left: solid 2px var(--ColorDarkest);
     }
 
     aside#left-sidebar,
@@ -675,7 +679,33 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
         border-top: solid 1px var(--ColorMiddle);
     }
 
+    aside#right-sidebar label#toc-title {
+        display: none;
+    }
+
     aside#right-sidebar #toc {
-        height: calc(100vh - 164px);
+        height: calc(100vh - 58px);
+        background-color: var(--ColorDarkest);
+        color: var(--ColorLightest);
+    }
+
+    aside#right-sidebar #toc a {
+        color: var(--ColorLightest);
+        text-decoration-color: transparent;
+    }
+    
+    aside#right-sidebar #toc a:hover {
+        text-decoration-color: var(--ColorLightest);
+    }
+    
+    aside#right-sidebar #toc .toc-sublist,
+    aside#right-sidebar #toc .toc-doublesublist {
+        color: var(--ColorMiddle);
+    }
+    
+    aside#right-sidebar #toc .toc-sublist a,
+    aside#right-sidebar #toc .toc-doublesublist a {
+        color: var(--ColorMiddle);
+        text-decoration-color: transparent;
     }
 }
