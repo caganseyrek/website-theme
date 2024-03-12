@@ -5,20 +5,21 @@
     /* for texts */
     --ColorDarkest: #2A324B;
 
-    /* background for left-sidebar hover and codeblocks */
+    /* background for left-sidebar hover */
     --ColorDark: #50576E;
 
     /* background for header containers and scrollbar thumb */
     --ColorMiddle: #767B91;
 
-    /* background for containers */
+    /* background for containers and inline-codes */
     --ColorLight: #C7CCDB;
 
     /* for general background and text */
     --ColorLightest: #E1E5EE;
 
-    --LinkColor: #D84A05;
-    --LinkColorHover: #EC7505;
+    --LinkColor: #C20114;
+
+    --InlineCodeBackground: rgba(199, 204, 219, 0.5);
 
     --DefaultFont: "Roboto Serif";
     --CodeFont: "Roboto Mono";
@@ -26,13 +27,11 @@
     --LineHeight: 28px;
     --BorderRadius: 10px;
 
-    --InfoColorLighter: rgb(0, 112, 203, 0.3);
-    --InfoColorLight: #0070CB;
-    --InfoFontColor: #004074;
+    --InfoColor: #5FA8D3;
+    --InfoFontColor: #133345;
 
-    --WarningColorLighter: rgb(239, 156, 3, 0.3);
-    --WarningColorLight: #EF9C03;
-    --WarningFontColor: #835501;
+    --WarningColor: #CCA000;
+    --WarningFontColor: #634E00;
 }
 
 * {
@@ -45,6 +44,7 @@
 
 a {
     cursor: pointer;
+    transition: all .1s ease-in-out;
 }
 
 ::selection {
@@ -177,11 +177,11 @@ aside#left-sidebar::-webkit-scrollbar-thumb {
 
 #page-header a#improve {
     color: var(--ColorLightest);
-    text-decoration: none;
+    text-decoration-color: transparent;
 }
 
 #page-header a#improve:hover {
-    color: var(--LinkColorHover);
+    text-decoration-color: var(--ColorLightest);
 }
 
 aside#right-sidebar {
@@ -239,12 +239,11 @@ aside#right-sidebar #toc::-webkit-scrollbar-thumb {
 
 aside#right-sidebar #toc a {
     color: var(--ColorDarkest);
-    text-decoration: none;
-    transition: all .1s ease-in-out;
+    text-decoration-color: transparent;
 }
 
 aside#right-sidebar #toc a:hover {
-    color: var(--LinkColorHover);
+    text-decoration-color: var(--ColorDarkest);
 }
 
 aside#right-sidebar #toc .toc-sublist,
@@ -264,12 +263,12 @@ aside#right-sidebar #toc .toc-doublesublist:last-child {
 aside#right-sidebar #toc .toc-sublist a,
 aside#right-sidebar #toc .toc-doublesublist a {
     color: var(--ColorMiddle);
-    text-decoration: none;
+    text-decoration-color: transparent;
 }
 
 aside#right-sidebar #toc .toc-sublist a:hover,
 aside#right-sidebar #toc .toc-doublesublist a:hover {
-    color: var(--LinkColorHover);
+    text-decoration-color: var(--ColorMiddle);
 }
 
 #page-contents {
@@ -285,18 +284,18 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents a {
     color: var(--LinkColor);
-    text-decoration: none;
+    text-decoration-color: transparent;
 }
 
 #page-contents a:hover {
-    color: var(--LinkColorHover);
+    text-decoration-color: var(--LinkColor);
 }
 
 #page-contents h2 {
     font-size: calc(1.50 * var(--FontSize));
     line-height: normal;
     margin: 0px;
-    padding: 0px;
+    padding: 10px 0px;
     box-sizing: border-box;
     display: block;
 }
@@ -305,11 +304,11 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     background-image: url("/assets/icons/play_arrow_FILL1_wght700_GRAD200_opsz48.svg");
     background-repeat: no-repeat;
     background-size: 20px 20px;
-    background-position: left 22px;
+    background-position: left 12px;
     font-size: calc(1.25 * var(--FontSize));
     line-height: normal;
     margin: 0px;
-    padding: 0px;
+    padding: 10px 0px 10px 25px;
     box-sizing: border-box;
     display: block;
 }
@@ -355,7 +354,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents blockquote.info {
     display: block;
-    background-color: var(--InfoColorLighter);
+    background-color: var(--InfoColor);
     background-image: url("/assets/icons/blockquote/info_FILL1_wght700_GRAD200_opsz48.svg");
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -363,7 +362,6 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     padding: 15px 15px 15px 45px;
     box-sizing: border-box;
     border-radius: var(--BorderRadius);
-    border: solid 2px var(--InfoColorLight);
     color: var(--InfoFontColor);
     margin: 10px 0px;
     overflow: hidden;
@@ -371,7 +369,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents blockquote.warning {
     display: block;
-    background-color: var(--WarningColorLighter);
+    background-color: var(--WarningColor);
     background-image: url("/assets/icons/blockquote/emergency_home_FILL1_wght700_GRAD200_opsz48.svg");
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -379,10 +377,28 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     padding: 15px 15px 15px 45px;
     box-sizing: border-box;
     border-radius: var(--BorderRadius);
-    border: solid 2px var(--WarningColorLight);
     color: var(--WarningFontColor);
     margin: 10px 0px;
     overflow: hidden;
+}
+
+#page-contents blockquote.info a,
+#page-contents blockquote.warning a {
+    color: var(--LinkColor);
+    text-decoration-color: transparent;
+}
+
+#page-contents blockquote.info a:hover,
+#page-contents blockquote.warning a:hover {
+    text-decoration-color: inherit;
+}
+#page-contents blockquote.info code.highlighter-rouge ,
+#page-contents blockquote.warning code.highlighter-rouge  {
+    padding: 3px 3px !important;
+    font-size: 90%;
+    background-color: var(--InlineCodeBackground);
+    border-radius: 5px;
+    color: var(--ColorDarkest);
 }
 
 #page-contents ul:not(.sublist),
@@ -447,7 +463,6 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 #page-contents figure.highlight pre {
     border-radius: var(--BorderRadius);
     background-color: var(--ColorLight);
-    border: solid 2px var(--ColorMiddle);
     padding: 20px;
     box-sizing: border-box;
     overflow-x: auto;
@@ -456,7 +471,9 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 #page-contents code.highlighter-rouge {
     padding: 3px 3px !important;
     font-size: 90%;
-    color: var(--LinkColor);
+    background-color: var(--ColorLight);
+    border-radius: 5px;
+    color: var(--ColorDarkest);
 }
 
 #page-contents #notfound {
