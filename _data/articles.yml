@@ -1,31 +1,31 @@
 - title: Django
-  url: django
+  url: /articles/django
   available: false
 
 - title: Ruby on Rails
-  url: rails
+  url: /articles/rails
   available: false
 
 - title: ASP.NET Core
-  url: aspdotnetcore
+  url: /articles/aspdotnetcore
   available: false
 
 - title: Spring
-  url: spring
+  url: /articles/spring
   available: false
 
 - title: Laravel
-  url: Spring
+  url: /articles/laravel
   available: false
 
 - title: React
-  url: react
+  url: /articles/react
   available: false
 
 - title: Express
-  url: expressjs
+  url: /articles/expressjs
   available: false
 
 - title: Electron
-  url: electronjs
+  url: /articles/electronjs
   available: false
