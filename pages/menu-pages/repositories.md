@@ -4,14 +4,22 @@ permalink: /repos
 editlink: edit/main/pages/menu-pages/repositories.md
 ---
 
+{% for repo in site.data.repositories %}
 <div class="repository-container">
-    <h2>TOC Generator</h2>
-    <p>A simple script that uses the headings in the content of the page and automatically generates a table of contents with sublists and classes for styling.</p>
+    <h2>{{ repo.name }}</h2>
+    <p>{{ repo.desc }}</p>
     <div class="repository-info">
-        <p markdown="1">Made with `Javascript` `CSS`</p>
+        <p class="repository-tags" markdown="1">
+        {% for tags in repo.tags %} `{{ tags }}` {% endfor %}
+        </p>
         <div class="repository-links">
-            <a href="https://github.com/caganseyrek/toc-generator" target="_blank">See on GitHub</a>
+            <a href="{{ repo.githu_link }}" target="_blank">See on GitHub</a>
+            {% if repo.docs == false %}
             <a class="unavailable" target="_blank">Documentation</a>
+            {% else %}
+            <a href="{{ repo.docs }}" target="_blank">Documentation</a>
+            {% endif %}
         </div>
     </div>
 </div>
+{% endfor %}
