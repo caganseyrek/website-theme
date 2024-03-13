@@ -499,13 +499,23 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     border-radius: var(--BorderRadius);
 }
 
+#page-contents .repository-container:not(:last-child) {
+    margin-bottom: 20px;
+}
+
 #page-contents .repository-container .repository-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: fit-content;
 }
 
-#page-contents .repository-container .repository-info p code.highlighter-rouge {
+#page-contents .repository-container .repository-info p.repository-tags {
+    width: 500px;
+    margin: 0px;
+}
+
+#page-contents .repository-container .repository-info p.repository-tags code.highlighter-rouge {
     padding: 3px 5px !important;
     font-size: 90%;
     background-color: var(--TransparentBackground);
@@ -516,27 +526,30 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
 
 #page-contents .repository-container .repository-info .repository-links {
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    margin-left: 20px;
 }
 
 #page-contents .repository-container .repository-info .repository-links a {
-    background-color: var(--TransparentBackground);
+    background-color: var(--ColorMiddle);
     border-radius: var(--BorderRadius);
+    width: 150px;
+    text-align: center;
     padding: 10px;
     box-sizing: border-box;
     border-radius: var(--LessBorderRadius);
-    color: var(--ColorDarkest);
+    color: var(--ColorLightest);
     text-decoration-color: transparent;
     display: inline-block;
 }
 
 #page-contents .repository-container .repository-info .repository-links a.unavailable {
-    color: var(--ColorMiddle);
+    color: var(--InlineCodeBackground);
     cursor: not-allowed;
 }
 
 #page-contents .repository-container .repository-info .repository-links a:hover {
-    text-decoration-color: var(--ColorDarkest);
+    text-decoration-color: var(--ColorLightest);
 }
 
 #page-contents .repository-container .repository-info .repository-links a:not(:last-child) {
@@ -621,7 +634,7 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     background-color: var(--ColorMiddle);
 }
 
-@media only screen and (max-width: 655px) {
+@media only screen and (max-width: 768px) {
     #page-contents .repository-container .repository-info {
         display: block;
     }
