@@ -13,7 +13,7 @@ editlink: edit/main/pages/menu-pages/repositories.md
         {% for tags in repo.tags %} `{{ tags }}` {% endfor %}
         </p>
         <div class="repository-links">
-            <a href="{{ repo.githu_link }}" target="_blank">See on GitHub</a>
+            <a href="{{ repo.github_link }}" target="_blank">See on GitHub</a>
             {% if repo.docs == false %}
             <a class="unavailable" target="_blank">Documentation</a>
             {% else %}
