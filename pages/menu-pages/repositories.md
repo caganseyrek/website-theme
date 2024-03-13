@@ -17,7 +17,7 @@ editlink: edit/main/pages/menu-pages/repositories.md
             {% if repo.docs == false %}
             <a class="unavailable" target="_blank">Documentation</a>
             {% else %}
-            <a href="{{ repo.docs }}" target="_blank">Documentation</a>
+            <a href="{{ repo.docs }}">Documentation</a>
             {% endif %}
         </div>
     </div>
