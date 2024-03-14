@@ -1,7 +1,7 @@
 ---
 title: Repositories
 permalink: /repos
-editlink: edit/main/pages/menu-pages/repositories.md
+editlink: /edit/main/pages/menu-pages/repositories.md
 ---
 
 {% for repo in site.data.repositories %}
@@ -13,11 +13,11 @@ editlink: edit/main/pages/menu-pages/repositories.md
         {% for tags in repo.tags %} `{{ tags }}` {% endfor %}
         </p>
         <div class="repository-links">
-            <a href="{{ repo.github_link }}" target="_blank">See on GitHub</a>
+            <a href="{{ site.github_profile }}{{ repo.github_link }}" target="_blank">See on GitHub</a>
             {% if repo.docs == false %}
             <a class="unavailable" target="_blank">Documentation</a>
             {% else %}
-            <a href="{{ repo.docs }}">Documentation</a>
+            <a href="{{ site.site_url }}{{ repo.docs }}">Documentation</a>
             {% endif %}
         </div>
     </div>

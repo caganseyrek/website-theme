@@ -1,7 +1,7 @@
 ---
 title: Home
 permalink: /
-editlink: edit/main/index.md
+editlink: /edit/main/index.md
 ---
 
 ## About Me
