@@ -1,5 +1,8 @@
 author: Çağan Seyrek
-git_repo: https://github.com/caganseyrek/caganseyrek.github.io
+github_profile: https://github.com/caganseyrek/
+
+site_repo: https://github.com/caganseyrek/caganseyrek.github.io/
+site_url: https://caganseyrek.github.io/
 
 plugins:
   - jekyll-sitemap
