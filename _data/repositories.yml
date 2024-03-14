@@ -1,23 +1,23 @@
 - name: TOC Generator
   desc: A simple script that uses the headings in the content of the page and automatically generates a table of contents with sublists and classes for styling.
   tags: [Javascript, CSS]
-  github_link: https://github.com/caganseyrek/toc-generator
+  github_link: /toc-generator
   docs: false
 
 - name: Lecture Manager
   desc: A full-stack lecture manager app with a frontend built using React and a backend made with Express, JWT, MongoDB, and Mongoose. (Collectively known as MERN Stack)
   tags: [React, Express, Typescript, Javascript, MongoDB]
-  github_link: https://github.com/caganseyrek/Lecture-Manager
-  docs: https://caganseyrek.github.io/repos/lecture-manager
+  github_link: /Lecture-Manager
+  docs: /repos/lecture-manager
 
 - name: Blackjack
   desc: A simple blackjack game made using Java (And a prototype Python version). It is currently played on the terminal but there is an incomplete version with UI.
   tags: [Java, Python]
-  github_link: https://github.com/caganseyrek/Blackjack
+  github_link: /Blackjack
   docs: false
 
 - name: Practice Projects
   desc: Various projects I've made for practising, written in various languages such as Javascript (and JQuery), Java, C# and Python. It includes a Date Calculator, PDF Merger (using pypdf), a simple Password Generator and a Unit Converter.
   tags: [Javascript, JQuery, C#, Java, Python]
-  github_link: https://github.com/caganseyrek/Practice-Projects
+  github_link: /Practice-Projects
   docs: false
