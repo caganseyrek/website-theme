@@ -9,9 +9,8 @@ plugins:
   - jekyll-seo-tag
 
 exclude:
-  - mdstyle.md
-  - paragraph.md
   - anchors.js
+  - menu.js
 
 markdown: kramdown
 kramdown:
