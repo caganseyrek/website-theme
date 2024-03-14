@@ -642,6 +642,8 @@ aside#right-sidebar #toc .toc-doublesublist a:hover {
     #page-contents .repository-container .repository-info .repository-links {
         display: flex;
         justify-content: start;
+        margin-left: 0px;
+        margin-top: 10px;
     }
 }
 
