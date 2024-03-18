@@ -30,10 +30,10 @@
   demo: false
   highlighted: false
 
-- name: Practice Projects
-  desc: Various projects I've made for practising, written in various languages.
-  tags: [Java, C#, Python, Javascript, JQuery]
-  github_link: /Practice-Projects
-  site_link: /projects/practice-projects
+- name: Practices
+  desc:Simple Projects I've made written in various languages
+  tags: [Java, Python]
+  github_link: /Practices
+  site_link: /projects/practices
   demo: false
   highlighted: false
