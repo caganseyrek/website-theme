@@ -1,0 +1,214 @@
+:root {
+    --ColorDarkest: #2A324B;
+    --ColorDark: #50576E;
+    --ColorMiddle: #767B91;
+    --ColorLight: #C7CCDB;
+    --ColorLightest: #E1E5EE;
+    
+    --TagColor: rgba(118, 123, 145, 0.35);
+    --LinkColor: #C20114;
+
+    --FontSize: 16px;
+    --LineHeight: 24px;
+    --BorderRadius: 10px;
+    --InnerBorderRadius: 5px;
+}
+
+section#article-header {
+    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/pierre-chatel-innocenti-pxoZSTdAzeU-unsplash.jpg") lightgray 50% / cover no-repeat;
+    background-position: center 70%;
+    height: 220px;
+    display: flex;
+    align-items: end;
+    color: var(--ColorLightest);
+}
+
+section#article-header h1 {
+    width: 996px;
+    margin: 20px auto;
+}
+
+div#article-intro {
+    display: grid;
+    grid-template-columns: 676px 300px;
+    column-gap: 20px;
+    margin: 20px 0px 10px 0px;
+}
+
+div#article-intro #left-column {
+    grid-column: 1;
+    background-color: var(--ColorLight);
+    border-radius: var(--BorderRadius);
+    width: 676px;
+    padding: 20px;
+    box-sizing: border-box;
+    height: min-content;
+}
+
+div#article-intro #right-column {
+    grid-column: 2;
+    background-color: var(--ColorLight);
+    border-radius: var(--BorderRadius);
+    width: 300px;
+    padding: 20px 10px 20px 20px;
+    box-sizing: border-box;
+}
+
+div#article-intro #left-column h2:first-child,
+div#article-intro #right-column h2:first-child {
+    margin-top: 0px;
+}
+
+div#article-intro #left-column p:last-child {
+    margin: 0px 0px 5px 0px;
+}
+
+div#article-intro #left-column label.tag {
+    background-color: var(--TagColor);
+    color: var(--ColorDarkest);
+    border-radius: var(--InnerBorderRadius);
+    margin-top: 5px;
+    padding: 3px 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: fit-content;
+}
+
+div#article-intro #left-column label.tag:not(:last-child) {
+    margin-right: 5px;    
+}
+
+div#article-intro #right-column section#toc {
+    height: calc(100% - 38px);
+    overflow-y: auto;
+}
+
+div#article-intro #right-column section#toc::-webkit-scrollbar {
+    width: 10px;
+}
+
+div#article-intro #right-column section#toc::-webkit-scrollbar-thumb {
+    background-color: var(--ColorMiddle);
+    border-radius: var(--InnerBorderRadius);
+}
+
+div#article-intro #right-column section#toc::-webkit-scrollbar-track {
+    background-color: var(--ColorLight);
+}
+
+div#article-intro #right-column section#toc ol {
+    padding: 0px 0px 0px 10px;
+    list-style-position: inside;
+}
+
+div#article-intro #right-column section#toc a {
+    color: var(--ColorDarkest);
+    text-decoration-color: transparent;
+}
+
+div#article-intro #right-column section#toc a:hover {
+    text-decoration-color: var(--ColorDarkest);
+}
+
+div#article-intro #right-column section#toc ul.toc-sublist {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    color: var(--ColorMiddle);
+    list-style-type: square;
+}
+
+div#article-intro #right-column section#toc ul.toc-sublist a {
+    color: var(--ColorMiddle);
+    text-decoration-color: transparent;
+}
+
+div#article-intro #right-column section#toc ul.toc-sublist a:hover {
+    text-decoration-color: var(--ColorMiddle);
+}
+
+div#article-intro #right-column section#toc ul.toc-sublist:last-child {
+    margin-bottom: 10px;
+}
+
+section#content-info {
+    background-color: var(--ColorLight);
+    border-radius: var(--BorderRadius);
+    margin-top: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section#content-info #last-edited {
+    width: fit-content;
+    max-width: 750px;
+    font-weight: bold;
+}
+
+section#content-info #last-edited label {
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+section#content-info a#up-button {
+    background-image: url("/assets/images/global/arrow_upward_FILL1_wght700_GRAD200_opsz48.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: right 0px top 50%;
+    padding-right: 25px;
+    color: var(--ColorDarkest);
+    width: fit-content;
+    display: block;
+}
+
+section#content-info a#up-button:hover {
+    text-decoration-color: var(--ColorDarkest);
+}
+
+@media only screen and (max-width: 1036px) {
+    section#article-header h1 {
+        width: 100%;
+        margin: 20px;
+    }
+
+    div#article-intro {
+        display: grid;
+        grid-template-columns: auto 260px;
+    }
+
+    div#article-intro #left-column {
+        width: auto;
+    }
+
+    div#article-intro #right-column {
+        width: 260px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div#article-intro {
+        width: 100%;
+        display: block;
+        column-gap: 0px;
+        row-gap: 20px;
+    }
+    
+    div#article-intro #left-column {
+        width: 100%;
+    }
+    
+    div#article-intro #right-column {
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    section#content-info {
+        justify-content: unset;
+        align-items: unset;
+        flex-direction: column;
+    }
+}

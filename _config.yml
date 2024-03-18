@@ -1,8 +1,7 @@
 author: Çağan Seyrek
-github_profile: https://github.com/caganseyrek/
+github_profile: https://github.com/caganseyrek
 
-site_repo: https://github.com/caganseyrek/caganseyrek.github.io/
-site_url: https://caganseyrek.github.io/
+site_link: https://caganseyrek.github.io
 
 plugins:
   - jekyll-sitemap
@@ -10,19 +9,8 @@ plugins:
 
 exclude:
   - anchors.js
-  - menu.js
 
 markdown: kramdown
 kramdown:
   syntax_highlighter: rouge
   input: GFM
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"
-  - scope:
-      path: "404"
-    values:
-      layout: "notfound"

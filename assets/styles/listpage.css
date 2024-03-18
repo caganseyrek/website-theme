@@ -1,0 +1,135 @@
+:root {
+    --ColorDarkest: #2A324B;
+    --ColorDark: #50576E;
+    --ColorMiddle: #767B91;
+    --ColorLight: #C7CCDB;
+    --ColorLightest: #E1E5EE;
+    
+    --TagColor: rgba(118, 123, 145, 0.35);
+    --LinkColor: #C20114;
+
+    --FontSize: 16px;
+    --LineHeight: 24px;
+    --BorderRadius: 10px;
+    --InnerBorderRadius: 5px;
+}
+
+section#articles-header {
+    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg") lightgray 50% / cover no-repeat;
+    background-position: center center;
+    height: 220px;
+    display: flex;
+    align-items: end;
+    color: var(--ColorLightest);
+}
+
+section#projects-header {
+    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/emile-perron-xrVDYZRGdw4-unsplash.jpg") lightgray 50% / cover no-repeat;
+    background-position: center 83%;
+    height: 220px;
+    display: flex;
+    align-items: end;
+    color: var(--ColorLightest);
+}
+
+section#articles-header h1,
+section#projects-header h1 {
+    width: 996px;
+    margin: 20px auto;
+}
+
+div.listpage-previews {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 10px;
+}
+
+div.listpage-previews div.preview {
+    width: 488px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: var(--BorderRadius);
+    background-color: var(--ColorLight);
+    display: flex;
+    flex-direction: column;
+}
+
+div.listpage-previews div.preview a.preview-title {
+    font-size: calc(1.25 * var(--FontSize));
+    font-weight: bolder;
+    line-height: normal;
+    color: var(--ColorDarkest);
+    text-decoration-color: transparent;
+    display: block;
+}
+
+div.listpage-previews div.preview a.preview-title:hover {
+    text-decoration-color: var(--ColorDarkest);
+}
+
+div.listpage-previews div.preview div.preview-desc {
+    margin: 20px 0px 5px 0px;
+    display: block;
+    flex-grow: 1;
+}
+
+div.listpage-previews div.preview div.preview-tags {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 5px;
+}
+
+div.listpage-previews div.preview div.preview-tags label.tag {
+    background-color: var(--TagColor);
+    color: var(--ColorDarkest);
+    border-radius: var(--InnerBorderRadius);
+    padding: 3px 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: fit-content;
+}
+
+div.listpage-previews div.preview div.preview-tags label:not(:last-child) {
+    margin-right: 5px;
+}
+
+div.listpage-previews div.preview a.preview-source {
+    background-image: url("/assets/images/global/open_in_new_FILL1_wght700_GRAD200_opsz48.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 10px 12px;
+    cursor: pointer;
+    width: fit-content;
+    display: inline-block;
+    color: var(--ColorLightest);
+    text-decoration: none;
+    background-color: var(--ColorMiddle);
+    border-radius: var(--InnerBorderRadius);
+    margin-top: 20px;
+    padding: 10px 15px 10px 40px;
+    box-sizing: border-box;
+    font-family: var(--DefaultFont);
+    font-size: var(--FontSize);
+    line-height: var(--LineHeight);
+}
+
+@media only screen and (max-width: 1036px) {
+    div.listpage-previews div.preview {
+        width: calc((100% - 20px) / 2);
+    }
+
+    section#articles-header h1,
+    section#projects-header h1 {
+        width: 100%;
+        margin: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    div.listpage-previews div.preview {
+        width: 100%;
+    }
+}
