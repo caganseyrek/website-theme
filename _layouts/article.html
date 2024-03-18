@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/assets/images/global/icon.svg">
+    <link rel="stylesheet" href="/assets/styles/global.css" />
+    <link rel="stylesheet" href="/assets/styles/article.css" />
+    <title>{{ page.title }} - {{ site.author }}</title>
+</head>
+<body>
+    <div id="mobile">
+        <div id="mobile-topbar">
+            <a id="mobile-name" href="/"></a>
+            <a id="mobile-menu-toggle" onclick="menu()"></a>
+        </div>
+        <div id="mobile-menu">
+            {% for page in site.data.pages %}<a class="mobile-menu-btn" id="mobile-{{ page.id }}" href="{{ page.path }}">{{ page.title }}</a>{% endfor %}
+            <a class="mobile-menu-btn" id="mobile-github" href="{{ site.github_profile }}" target="_blank">GitHub</a>
+        </div>
+    </div>
+    <header id="topbar">
+        <div class="wrapper">
+            <a id="name" href="/"></a>
+            <nav id="menu">
+                {% for page in site.data.pages %}<a class="menu-btn" id="{{ page.id }}" href="{{ page.path }}">{{ page.title }}</a>{% endfor %}
+            </nav>
+            <a id="github-btn" href="{{ site.github_profile }}" target="_blank"></a>
+        </div>
+    </header>
+    <section id="article-header">
+        <h1>{{ page.title }}</h1>
+    </section>
+    <section id="page-contents">
+        {{ content }}
+        <section id="content-info">
+            <div id="last-edited">
+                Page Last Edited:<label>{{ page.lastedited }}</label>
+            </div>
+            <a id="up-button" href="#">Return to Top</a>
+        </section>
+    </section>
+    <script src="/assets/scripts/toc.js"></script>
+    <script src="/assets/scripts/mobile.js"></script>
+</body>
+</html>

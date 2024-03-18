@@ -1,31 +1,5 @@
-- title: Django
-  url: /articles/django
-  available: false
-
-- title: Ruby on Rails
-  url: /articles/rails
-  available: false
-
-- title: ASP.NET Core
-  url: /articles/aspdotnetcore
-  available: false
-
-- title: Spring
-  url: /articles/spring
-  available: false
-
-- title: Laravel
-  url: /articles/laravel
-  available: false
-
-- title: React
-  url: /articles/react
-  available: false
-
-- title: Express
-  url: /articles/expressjs
-  available: false
-
-- title: Electron
-  url: /articles/electronjs
-  available: false
+- name: Example Article
+  desc: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam error obcaecati dolores molestias tempore?
+  tags: [Example tag 1, Example tag 2]
+  site_link: /articles/example_article
+  highlighted: false
