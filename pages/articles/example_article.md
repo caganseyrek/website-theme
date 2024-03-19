@@ -43,38 +43,29 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore dolor atque ipsa
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus corporis iste magnam. Quisquam maiores vero optio dolores veritatis recusandae. Cum quam provident porro itaque quis? Natus dolor voluptatum, odit exercitationem eius earum quisquam obcaecati laudantium, distinctio soluta, sunt accusantium modi debitis ea. Iure harum beatae suscipit eaque officiis est quasi, sit, dolor laudantium, inventore ipsa necessitatibus minus obcaecati? Maiores dolor voluptates maxime non? Similique ipsum perferendis quo inventore impedit sequi, sed officia quis asperiores ducimus perspiciatis cum fugiat numquam fuga consectetur reprehenderit ex consequuntur culpa! Fuga quaerat voluptate tenetur molestias sapiente aspernatur vero saepe nihil facere voluptatum velit ea, omnis perferendis, ipsam iusto commodi! Laboriosam eum, rem error, neque, necessitatibus aliquid optio aut unde illo debitis labore ipsa repellat quasi cum tenetur. Voluptatibus neque est deleniti corrupti nostrum dolores esse necessitatibus odio facere, deserunt perspiciatis ea, accusantium aut cupiditate, laudantium saepe possimus repellat delectus ipsa adipisci at aliquam vitae ipsum sint. Sint, quaerat voluptate esse qui fuga doloribus neque autem magnam optio exercitationem perspiciatis distinctio dolores nemo. Voluptatum eligendi odio, ab dolores commodi enim debitis sequi corporis inventore, repudiandae, earum voluptatem neque provident excepturi animi illo sapiente perspiciatis quas cum perferendis quam! Temporibus, perferendis quos. Distinctio non veniam animi nemo provident autem earum repudiandae blanditiis, soluta, possimus, nostrum esse sunt quod? Hic aspernatur atque ex possimus minima cum. Sequi quisquam aliquam quidem possimus rem, consequatur magnam inventore veritatis. Officiis, numquam tenetur. Rerum, nihil. Amet, ut laborum corporis deleniti expedita, rem soluta est iure dolorum et harum placeat rerum doloremque molestias quas ex excepturi dignissimos incidunt sapiente blanditiis explicabo reprehenderit asperiores iusto? Voluptatibus quos nostrum soluta perferendis et ut, ducimus assumenda nam expedita nesciunt at omnis vel, dolores eaque quae laboriosam laudantium voluptatem quaerat nihil. Dicta quam excepturi repellendus, laborum quibusdam consectetur impedit, aut id expedita, voluptatum exercitationem tempora neque minima? Mollitia voluptate optio cupiditate ex odio tenetur eum quaerat, provident natus.
 
 <div class="codeblock-header">src/pages/index.tsx</div>
-{% highlight react linenos %}
-import { useState } from "react"
-import { exampleUserImages } from "../constants/_userInfo"
+{% highlight javascript linenos %}
+const mongoose = require('mongoose')
 
-const Topbar = () => {
-  const [sidebarState, setSidebarState] = useState(true);
-  const userPicture = {
-    backgroundImage: exampleUserImages.profilePicture,
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "100% auto",
-    backgroundPosition: "center center",
-  }
-  
-  return (
-    <div id="topbar">
-      <input type="button" id="sidebar-toggle-btn"
-        onClick={() => setSidebarState(sidebarState => !sidebarState)}
-      />
-      <input type="button" id="profile-image" style={userPicture} />
-      <div id="logout-container">
-        <a id="logout">
-          Log Out
-          <label>{/* example user email */}</label>
-        </a>
-      </div>
-    </div>
-  )
-}
-export default Topbar
+const userSchema = mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
+    name: { type: String, required: true },
+    username: { type: String, required: false },
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+        match: /* insert e-mail controlling regex here */
+    },
+    // blah blah comment blah
+    password: { type: String, required: true },
+    passwordResetToken: { type: String },
+    passwordResetTokenExpiry: { type: Number }
+})
+
+module.exports = mongoose.model('userSchema', userSchema)
 {% endhighlight %}
 
-Culpa earum vero corporis in? Amet, voluptas provident eligendi nam praesentium doloremque ipsam vel nobis, vitae eos mollitia nihil corporis quo repellat esse rerum aliquid vero itaque distinctio adipisci autem qui est laboriosam. Ut, ea aliquam eum nesciunt quisquam quaerat aperiam iure fuga repellendus voluptatem enim accusamus, ducimus est dolorum? Et nobis doloremque aperiam, accusamus at, dolore similique in veritatis reprehenderit, id incidunt culpa accusantium natus eius explicabo nesciunt quod odit molestiae ex excepturi. Dolorem necessitatibus fuga, omnis quam sit consequuntur quia nesciunt voluptatibus iure atque nostrum officiis dolorum a sapiente ipsa odit corrupti earum deleniti laboriosam optio itaque, eligendi velit consequatur ipsam! Illum ipsam quos veritatis doloribus quaerat aspernatur voluptatibus eos assumenda animi, suscipit numquam, ex id tempora voluptatum quis doloremque hic nihil repudiandae corrupti reiciendis eum! Voluptate, voluptas sapiente? Maxime iste modi ad eveniet omnis pariatur cum, nostrum rerum iure perferendis veritatis aliquam eligendi similique natus incidunt consequatur minus ipsum illo saepe possimus atque ex voluptatibus voluptatem? Ut deleniti cum sapiente odio neque sit iste commodi perferendis fugiat dicta, ipsum adipisci rerum dolor. Aut, praesentium consequuntur. Assumenda quo rerum voluptatem quos quas deserunt reprehenderit est nesciunt inventore, quidem, voluptate earum aperiam minima aliquid praesentium obcaecati ducimus esse provident cum repellat hic, adipisci magnam quia aliquam. Dolor incidunt magnam blanditiis!
+Culpa earum vero `corporis` in? Amet, voluptas provident eligendi nam praesentium doloremque ipsam vel nobis, vitae eos mollitia nihil corporis quo repellat esse rerum aliquid vero itaque distinctio adipisci autem qui est laboriosam. Ut, ea aliquam eum nesciunt quisquam quaerat aperiam iure fuga repellendus voluptatem enim accusamus, ducimus est dolorum? Et nobis doloremque aperiam, accusamus at, dolore similique in veritatis reprehenderit, id incidunt culpa accusantium natus eius explicabo nesciunt quod odit molestiae ex excepturi. Dolorem necessitatibus fuga, omnis quam sit consequuntur quia nesciunt voluptatibus iure atque nostrum officiis dolorum a sapiente ipsa odit corrupti earum deleniti laboriosam optio itaque, eligendi velit consequatur ipsam! Illum ipsam quos veritatis doloribus quaerat aspernatur voluptatibus eos assumenda animi, suscipit numquam, ex id tempora voluptatum quis doloremque hic nihil repudiandae corrupti reiciendis eum! Voluptate, voluptas sapiente? Maxime iste modi ad eveniet omnis pariatur cum, nostrum rerum iure perferendis veritatis aliquam eligendi similique natus incidunt consequatur minus ipsum illo saepe possimus atque ex voluptatibus voluptatem? Ut deleniti cum sapiente odio neque sit iste commodi perferendis fugiat dicta, ipsum adipisci rerum dolor. Aut, praesentium consequuntur. Assumenda quo rerum voluptatem quos quas deserunt reprehenderit est nesciunt inventore, quidem, voluptate earum aperiam minima aliquid praesentium obcaecati ducimus esse provident cum repellat hic, adipisci magnam quia aliquam. Dolor incidunt magnam blanditiis!
 
 ### Phasellus h3
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum ea obcaecati aut molestias modi eum architecto quasi omnis. Suscipit ipsam ipsum, et voluptate error architecto recusandae neque ullam incidunt iure nam similique at ea repudiandae esse nostrum. Dolore quas quam corporis earum sit non cupiditate vel repudiandae, consequatur porro delectus incidunt ut reprehenderit harum itaque voluptatem voluptatibus omnis molestiae quo possimus amet necessitatibus saepe! Eligendi placeat non ut, dolores ullam alias minus iste eius dignissimos at blanditiis reiciendis optio consequatur possimus impedit, voluptates ducimus nulla quis tempora quos, facilis unde eaque sunt. Sapiente quasi inventore distinctio ex id, alias soluta incidunt eveniet libero minus labore dolor voluptate minima tempora possimus commodi illo quod laudantium nisi. Animi aliquid assumenda ut rerum eius sunt repellat veniam vitae, placeat alias, veritatis, suscipit dolorum. Dicta placeat in, asperiores recusandae animi ullam minima deserunt dolorum iure cumque eveniet possimus praesentium rem ut cupiditate impedit eligendi quasi aspernatur labore. Voluptatum nam, quae animi assumenda perspiciatis corrupti ab esse in nisi molestiae cumque quis minima itaque reprehenderit fugiat tenetur adipisci at vitae dicta repudiandae velit. Odit odio modi commodi reiciendis nihil id suscipit facilis fugiat enim impedit est veniam cum, voluptates voluptas ullam voluptatum quod dignissimos eum soluta sed! Nihil omnis nostrum nam. Dolore recusandae, nihil consequuntur itaque tenetur in, iusto sapiente obcaecati ea ipsa ab nam aspernatur, quas reprehenderit quo adipisci cum aut. Deleniti voluptatem dolor debitis libero nam maiores minus veniam amet voluptas molestiae distinctio, a quis neque ratione atque. Illum, nostrum officia beatae reiciendis, explicabo, aut eos provident dicta tempore adipisci hic corporis aliquam numquam optio earum modi error soluta quasi consequatur fugiat assumenda? Nihil ipsa, ipsam doloribus hic qui accusantium, nisi facere sed magnam deserunt odit eius laboriosam quo aperiam, et eligendi atque libero soluta culpa eaque! A, placeat nesciunt corporis temporibus blanditiis vero consequuntur debitis dolor quo, dolores consectetur porro, amet laudantium! Quas iste dignissimos non iure minus officiis labore magni exercitationem eum!
