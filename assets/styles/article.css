@@ -60,10 +60,10 @@ div#article-intro #right-column h2:first-child {
 }
 
 div#article-intro #left-column p:last-child {
-    margin: 0px 0px 5px 0px;
+    margin: 0px;
 }
 
-div#article-intro #left-column label.tag {
+div#article-intro #left-column span.tag {
     background-color: var(--TransparentColor);
     color: var(--ColorDarkest);
     border-radius: var(--InnerBorderRadius);
@@ -74,7 +74,7 @@ div#article-intro #left-column label.tag {
     width: fit-content;
 }
 
-div#article-intro #left-column label.tag:not(:last-child) {
+div#article-intro #left-column span.tag:not(:last-child) {
     margin-right: 5px;    
 }
 
@@ -149,7 +149,7 @@ section#content-info #last-edited {
     font-weight: bold;
 }
 
-section#content-info #last-edited label {
+section#content-info #last-edited span {
     font-weight: normal;
     margin-left: 5px;
 }
