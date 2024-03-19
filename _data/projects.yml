@@ -1,6 +1,5 @@
 - name: TOC Generator
   desc: A simple script that automatically generates a table of contents
-  tags: [Javascript, CSS]
   github_link: /toc-generator
   site_link: /projects/toc-generator
   demo: demos/toc-generator
@@ -8,7 +7,6 @@
 
 - name: Lecture Manager
   desc: A full-stack lecture manager app built using React and Express
-  tags: [React, Express, MongoDB]
   github_link: /Lecture-Manager
   site_link: /projects/lecture-manager
   demo: false
@@ -16,7 +14,6 @@
 
 - name: caganseyrek.github.io
   desc: The template and contents of the website caganseyrek.github.io
-  tags: [HTML, CSS, Javascript, Jekyll]
   github_link: /caganseyrek.github.io
   site_link: /projects/caganseyrek.github.io
   demo: false
@@ -24,7 +21,6 @@
   
 - name: Blackjack
   desc: A simple terminal-based blackjack game made using Java
-  tags: [Java, Python]
   github_link: /Blackjack
   site_link: /projects/blackjack
   demo: false
@@ -32,7 +28,6 @@
 
 - name: Practices
   desc: Simple Projects I've made written in various languages
-  tags: [Java, Python]
   github_link: /Practices
   site_link: /projects/practices
   demo: false
