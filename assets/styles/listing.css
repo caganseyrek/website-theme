@@ -15,8 +15,8 @@
 }
 
 section#articles-header {
-    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg") lightgray 50% / cover no-repeat;
-    background-position: center center;
+    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/walling-OvLXbURo9Wo-unsplash.jpg") lightgray 50% / cover no-repeat;
+    background-position: center 48%;
     height: 220px;
     display: flex;
     align-items: end;
@@ -24,8 +24,8 @@ section#articles-header {
 }
 
 section#projects-header {
-    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/emile-perron-xrVDYZRGdw4-unsplash.jpg") lightgray 50% / cover no-repeat;
-    background-position: center 83%;
+    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/david-schultz-6LIqs_kKu3c-unsplash.jpg") lightgray 50% / cover no-repeat;
+    background-position: center center;
     height: 220px;
     display: flex;
     align-items: end;

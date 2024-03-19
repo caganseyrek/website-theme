@@ -15,7 +15,7 @@
 }
 
 section#home-header {
-    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/kyle-sung-oQuP_XBjOMY-unsplash.jpg") lightgray 50% / cover no-repeat;
+    background: linear-gradient(0deg, rgba(42, 50, 75, 0.4) 0%, rgba(42, 50, 75, 0.4) 100%), url("/assets/images/header-images/usgs-hoS3dzgpHzw-unsplash.jpg") lightgray 50% / cover no-repeat;
     background-position: center center;
     height: 400px;
     color: var(--ColorLightest);
