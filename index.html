@@ -8,14 +8,13 @@ lastedited: March 2024
 <p>I began my web development journey in around 2014-2015 with HTML, CSS, and a little bit of JavaScript (more like designing than development, haha). Currently, I work with (and continue to learn) several programming languages, including JavaScript, TypeScript, C#, Java, and Python. Additionally, I am familiar with frameworks such as React, Express and ASP.NET Core.</p>
 <p>I plan to start working with Ruby and PHP within the language category, and explore Ruby on Rails, Django, Laravel, and Spring in the framework category.</p>
 <p>Here are some highlights from my projects:</p>
-<div class="home-previews">
+<div class="listing-previews home-previews">
 	{% for project in site.data.projects %}
 	{% if project.highlighted == true %}
-	<div class="preview">
+	<div class="preview home-preview">
 		<a class="preview-title" href="{{ project.site_link }}">{{ project.name }}</a>
 		<div class="preview-desc">{{ project.desc }}</div>
-		<div class="preview-tags">{% for tag in project.tags %}<label class="tag">{{ tag }}</label>{% endfor %}</div>
-		<a class="preview-source" href="{{ site.github_profile }}{{ project.github_link }}" target="_blank">View Source</a>
+		<a class="preview-project-source" href="{{ site.github_profile }}{{ project.github_link }}" target="_blank">View Source</a>
 	</div>
 	{% endif %}
 	{% endfor %}
