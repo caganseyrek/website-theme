@@ -91,7 +91,7 @@ div.listing-previews div.preview div.preview-article-tags {
     row-gap: 5px;
 }
 
-div.listing-previews div.preview div.preview-article-tags label.article-tag {
+div.listing-previews div.preview div.preview-article-tags span.article-tag {
     background-color: var(--TransparentColor);
     color: var(--ColorDarkest);
     border-radius: var(--InnerBorderRadius);
@@ -101,7 +101,7 @@ div.listing-previews div.preview div.preview-article-tags label.article-tag {
     width: fit-content;
 }
 
-div.listing-previews div.preview div.preview-article-tags label.article-tag:not(:last-child) {
+div.listing-previews div.preview div.preview-article-tags span.article-tag:not(:last-child) {
     margin-right: 5px;
 }
 
