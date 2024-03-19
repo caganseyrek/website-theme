@@ -15,17 +15,17 @@ function menu() {
         }, 50);
         mobileMenu = true;
     } else {
-        setTimeout(() => {        
-            document.getElementById("mobile-menu").style.maxHeight = "0px";
+        setTimeout(() => {
+            document.getElementById("mobile-home").style.visibility = "hidden";
+            document.getElementById("mobile-articles").style.visibility = "hidden";
+            document.getElementById("mobile-projects").style.visibility = "hidden";
+            document.getElementById("mobile-github").style.visibility = "hidden";
+            document.getElementById("mobile-home").style.opacity = "0";
+            document.getElementById("mobile-articles").style.opacity = "0";
+            document.getElementById("mobile-projects").style.opacity = "0";
+            document.getElementById("mobile-github").style.opacity = "0";
         }, 50);
-        document.getElementById("mobile-home").style.visibility = "hidden";
-        document.getElementById("mobile-articles").style.visibility = "hidden";
-        document.getElementById("mobile-projects").style.visibility = "hidden";
-        document.getElementById("mobile-github").style.visibility = "hidden";
-        document.getElementById("mobile-home").style.opacity = "0";
-        document.getElementById("mobile-articles").style.opacity = "0";
-        document.getElementById("mobile-projects").style.opacity = "0";
-        document.getElementById("mobile-github").style.opacity = "0";
+        document.getElementById("mobile-menu").style.maxHeight = "0px";
         mobileMenu = false;
     }
 }
