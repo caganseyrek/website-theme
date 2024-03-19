@@ -1,5 +1,5 @@
 - name: Example Article
   desc: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam error obcaecati dolores molestias tempore?
-  tags: [Example tag 1, Example tag 2]
+  tags: [Example tag 1, Example tag 2, Example tag 3]
   site_link: /articles/example_article
   highlighted: false
