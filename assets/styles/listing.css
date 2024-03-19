@@ -38,14 +38,14 @@ section#projects-header h1 {
     margin: 20px auto;
 }
 
-div.listing-previews {
+div.listings {
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 10px;
 }
 
-div.listing-previews div.preview {
+div.listings div.list-entry {
     width: 488px;
     padding: 20px;
     box-sizing: border-box;
@@ -55,15 +55,12 @@ div.listing-previews div.preview {
     flex-direction: column;
 }
 
-div.listing-previews.home-previews {
-    column-gap: 21px;
+div.listings.home-listings {
+    margin-top: 10px;
 }
 
-div.listing-previews div.preview.home-preview {
-    width: 318px;
-}
-
-div.listing-previews div.preview a.preview-title {
+div.listings div.list-entry .list-entry-title,
+div.listings div.list-entry a.list-entry-title {
     font-size: calc(1.25 * var(--FontSize));
     font-weight: bolder;
     line-height: normal;
@@ -72,18 +69,18 @@ div.listing-previews div.preview a.preview-title {
     display: block;
 }
 
-div.listing-previews div.preview a.preview-title:hover {
+div.listings div.list-entry a.list-entry-title:hover {
     text-decoration-color: var(--ColorDarkest);
 }
 
-div.listing-previews div.preview div.preview-desc {
+div.listings div.list-entry div.list-entry-desc {
     margin: 10px 0px;
     display: block;
     flex-grow: 1;
 }
 
 /* Only for article listing */
-div.listing-previews div.preview div.preview-article-tags {
+div.listings div.list-entry div.list-entry-tags {
     width: fit-content;
     display: flex;
     flex-direction: row;
@@ -91,7 +88,7 @@ div.listing-previews div.preview div.preview-article-tags {
     row-gap: 5px;
 }
 
-div.listing-previews div.preview div.preview-article-tags span.article-tag {
+div.listings div.list-entry div.list-entry-tags span.list-entry-tag {
     background-color: var(--TransparentColor);
     color: var(--ColorDarkest);
     border-radius: var(--InnerBorderRadius);
@@ -101,16 +98,21 @@ div.listing-previews div.preview div.preview-article-tags span.article-tag {
     width: fit-content;
 }
 
-div.listing-previews div.preview div.preview-article-tags span.article-tag:not(:last-child) {
+div.listings div.list-entry div.list-entry-tags span.list-entry-tag:not(:last-child) {
     margin-right: 5px;
 }
 
 /* Only for project listing */
-div.listing-previews div.preview a.preview-project-source {
-    background-image: url("/assets/images/global/open_in_new_FILL1_wght700_GRAD200_opsz48.svg");
-    background-repeat: no-repeat;
-    background-size: 20px 20px;
-    background-position: 10px 12px;
+div.listings div.list-entry .list-entry-buttons {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 5px;
+    column-gap: 10px;
+}
+
+div.listings div.list-entry a.list-entry-button {
     cursor: pointer;
     width: fit-content;
     display: inline-block;
@@ -125,13 +127,23 @@ div.listing-previews div.preview a.preview-project-source {
     line-height: var(--LineHeight);
 }
 
-@media only screen and (max-width: 1036px) {
-    div.listing-previews div.preview {
-        width: calc((100% - 20px) / 2);
-    }
+div.listings div.list-entry a.list-entry-button.source {
+    background-image: url("/assets/images/global/open_in_new_FILL1_wght700_GRAD200_opsz48.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 10px 12px;
+}
 
-    div.home-previews div.preview.home-preview {
-        width: calc((100% - 42px) / 3);
+div.listings div.list-entry a.list-entry-button.article {
+    background-image: url("/assets/images/global/article_FILL1_wght700_GRAD200_opsz48.svg");
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: 10px 12px;
+}
+
+@media only screen and (max-width: 1036px) {
+    div.listings div.list-entry {
+        width: calc((100% - 20px) / 2);
     }
 
     section#articles-header h1,
@@ -139,12 +151,10 @@ div.listing-previews div.preview a.preview-project-source {
         width: 100%;
         margin: 20px;
     }
-    
 }
 
 @media only screen and (max-width: 768px) {
-    div.listing-previews div.preview,
-    div.listing-previews div.preview.home-preview {
+    div.listings div.list-entry {
         width: 100%;
     }
 }
