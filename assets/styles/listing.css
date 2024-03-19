@@ -5,7 +5,7 @@
     --ColorLight: #C7CCDB;
     --ColorLightest: #E1E5EE;
     
-    --TagColor: rgba(118, 123, 145, 0.35);
+    --TransparentColor: rgba(118, 123, 145, 0.35);
     --LinkColor: #C20114;
 
     --FontSize: 16px;
@@ -38,14 +38,14 @@ section#projects-header h1 {
     margin: 20px auto;
 }
 
-div.listpage-previews {
+div.listing-previews {
     display: flex;
     flex-wrap: wrap;
     column-gap: 20px;
     row-gap: 10px;
 }
 
-div.listpage-previews div.preview {
+div.listing-previews div.preview {
     width: 488px;
     padding: 20px;
     box-sizing: border-box;
@@ -55,7 +55,15 @@ div.listpage-previews div.preview {
     flex-direction: column;
 }
 
-div.listpage-previews div.preview a.preview-title {
+div.listing-previews.home-previews {
+    column-gap: 21px;
+}
+
+div.listing-previews div.preview.home-preview {
+    width: 318px;
+}
+
+div.listing-previews div.preview a.preview-title {
     font-size: calc(1.25 * var(--FontSize));
     font-weight: bolder;
     line-height: normal;
@@ -64,17 +72,18 @@ div.listpage-previews div.preview a.preview-title {
     display: block;
 }
 
-div.listpage-previews div.preview a.preview-title:hover {
+div.listing-previews div.preview a.preview-title:hover {
     text-decoration-color: var(--ColorDarkest);
 }
 
-div.listpage-previews div.preview div.preview-desc {
-    margin: 20px 0px 5px 0px;
+div.listing-previews div.preview div.preview-desc {
+    margin: 10px 0px;
     display: block;
     flex-grow: 1;
 }
 
-div.listpage-previews div.preview div.preview-tags {
+/* Only for article listing */
+div.listing-previews div.preview div.preview-article-tags {
     width: fit-content;
     display: flex;
     flex-direction: row;
@@ -82,8 +91,8 @@ div.listpage-previews div.preview div.preview-tags {
     row-gap: 5px;
 }
 
-div.listpage-previews div.preview div.preview-tags label.tag {
-    background-color: var(--TagColor);
+div.listing-previews div.preview div.preview-article-tags label.article-tag {
+    background-color: var(--TransparentColor);
     color: var(--ColorDarkest);
     border-radius: var(--InnerBorderRadius);
     padding: 3px 5px;
@@ -92,11 +101,12 @@ div.listpage-previews div.preview div.preview-tags label.tag {
     width: fit-content;
 }
 
-div.listpage-previews div.preview div.preview-tags label:not(:last-child) {
+div.listing-previews div.preview div.preview-article-tags label.article-tag:not(:last-child) {
     margin-right: 5px;
 }
 
-div.listpage-previews div.preview a.preview-source {
+/* Only for project listing */
+div.listing-previews div.preview a.preview-project-source {
     background-image: url("/assets/images/global/open_in_new_FILL1_wght700_GRAD200_opsz48.svg");
     background-repeat: no-repeat;
     background-size: 20px 20px;
@@ -104,11 +114,10 @@ div.listpage-previews div.preview a.preview-source {
     cursor: pointer;
     width: fit-content;
     display: inline-block;
-    color: var(--ColorLightest);
+    color: var(--ColorDarkest);
     text-decoration: none;
-    background-color: var(--ColorMiddle);
+    background-color: var(--TransparentColor);
     border-radius: var(--InnerBorderRadius);
-    margin-top: 20px;
     padding: 10px 15px 10px 40px;
     box-sizing: border-box;
     font-family: var(--DefaultFont);
@@ -117,8 +126,12 @@ div.listpage-previews div.preview a.preview-source {
 }
 
 @media only screen and (max-width: 1036px) {
-    div.listpage-previews div.preview {
+    div.listing-previews div.preview {
         width: calc((100% - 20px) / 2);
+    }
+
+    div.home-previews div.preview.home-preview {
+        width: calc((100% - 42px) / 3);
     }
 
     section#articles-header h1,
@@ -126,10 +139,12 @@ div.listpage-previews div.preview a.preview-source {
         width: 100%;
         margin: 20px;
     }
+    
 }
 
 @media only screen and (max-width: 768px) {
-    div.listpage-previews div.preview {
+    div.listing-previews div.preview,
+    div.listing-previews div.preview.home-preview {
         width: 100%;
     }
 }
