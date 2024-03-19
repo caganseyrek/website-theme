@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Inter&display=swap');
 @import url('./highlight.css');
 
 :root {
@@ -12,7 +12,7 @@
     --LinkColor: #C20114;
 
     --DefaultFont: "Inter";
-    --CodeFont: "Roboto Mono";
+    --CodeFont: "Courier Prime";
     --FontSize: 16px;
     --LineHeight: 24px;
     --BorderRadius: 10px;
@@ -56,6 +56,7 @@ body {
     font-family: var(--DefaultFont);
     font-size: var(--FontSize);
     line-height: var(--LineHeight);
+    letter-spacing: 0.15px;
 }
 
 .wrapper {
@@ -306,14 +307,32 @@ code {
     font-family: var(--CodeFont) !important;
 }
 
+code.highlighter-rouge {
+    font-size: 90%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 3px;
+    box-sizing: border-box;
+    background-color: var(--TransparentColor);
+    border-radius: var(--InnerBorderRadius);
+    color: var(--ColorDarkest);
+    font-family: var(--CodeFont);
+}
+
 .codeblock-header {
     background-color: var(--ColorMiddle);
+    background-image: url("/assets/images/global/three_dots.svg");
+    background-repeat: no-repeat;
+    background-size: 60px 15px;
+    background-position: left 15px center;
     color: var(--ColorLightest);
     padding: 10px;
     text-align: center;
     border-top-left-radius: var(--BorderRadius);
     border-top-right-radius: var(--BorderRadius);
     margin-top: 20px;
+    letter-spacing: 0.2px;
 }
 
 figure.highlight,
@@ -345,6 +364,9 @@ figure.highlight>pre::-webkit-scrollbar-thumb {
 table.rouge-table {
     width: 100%;
     margin: 0px;
+    font-size: var(--FontSize);
+    font-family: var(--CodeFont);
+    line-height: var(--LineHeight);
 }
 
 table.rouge-table th,
@@ -363,7 +385,6 @@ table.rouge-table tbody tr {
 }
 
 table.rouge-table td.gutter.gl {
-    font-weight: bolder;
     border-bottom-left-radius: var(--BorderRadius);
 }
 
