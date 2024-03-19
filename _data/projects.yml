@@ -1,3 +1,10 @@
+- name: caganseyrek.github.io
+  desc: The template and contents of the website caganseyrek.github.io
+  github_link: /caganseyrek.github.io
+  site_link: /projects/caganseyrek.github.io
+  demo: false
+  highlighted: true
+
 - name: TOC Generator
   desc: A simple script that automatically generates a table of contents
   github_link: /toc-generator
@@ -11,24 +18,10 @@
   site_link: /projects/lecture-manager
   demo: false
   highlighted: true
-
-- name: caganseyrek.github.io
-  desc: The template and contents of the website caganseyrek.github.io
-  github_link: /caganseyrek.github.io
-  site_link: /projects/caganseyrek.github.io
-  demo: false
-  highlighted: true
   
 - name: Blackjack
   desc: A simple terminal-based blackjack game made using Java
   github_link: /Blackjack
   site_link: /projects/blackjack
-  demo: false
-  highlighted: false
-
-- name: Practices
-  desc: Simple Projects I've made written in various languages
-  github_link: /Practices
-  site_link: /projects/practices
   demo: false
   highlighted: false
