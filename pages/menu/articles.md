@@ -8,7 +8,7 @@ permalink: /articles
 	<div class="preview">
 		<a class="preview-title" href="{{ article.site_link }}">{{ article.name }}</a>
 		<div class="preview-desc">{{ article.desc }}</div>
-		<div class="preview-article-tags">{% for tag in article.tags %}<label class="article-tag">{{ tag }}</label>{% endfor %}</div>
+		<div class="preview-article-tags">{% for tag in article.tags %}<span class="article-tag">{{ tag }}</span>{% endfor %}</div>
 	</div>
 	{% endfor %}
 </div>
